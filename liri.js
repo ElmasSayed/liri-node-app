@@ -10,19 +10,19 @@ var api = process.argv[2];
 var param = process.argv[3];
 var param2 = process.argv[4];
 
-if (api == "my-tweets"){
-	showMyTweets(param);
-}else if(api == "spotify-this-song"){
+if (api === "my-tweets"){
+	showMyTweets(param)
+}else if(api === "spotify-this-song"){
  	showSpotifySongs(param)
-}else if(api == "movie-this"){
- 	showMovies(param);
-}else if(api == "do-what-it-says"){
- 	showDoAsItSays(param);
-}else if(api == "giphy"){
-	showGiphys(param);
-}else {
-	console.log("Second parameter API is invalid.");
-	return
+}else if(api === "movie-this"){
+ 	showMovies(param)
+}else if ("do-what-it-says" === api) {
+    showDoAsItSays(param)
+} else if (api === "giphy") {
+    showGiphys(param)
+} else {
+    console.log("Second parameter API is invalid.");
+    return
 }
 // ------------------------------------------------------------------------------------------------------------------
 // 													Functions
@@ -107,9 +107,11 @@ function showSpotifySongs(param){
 	   	};
 	});
 }
-// --------------------------------------------------------------------------------------------------------
+/*
+ --------------------------------------------------------------------------------------------------------
 
-//twitter
+ twitter
+ */
 function showMyTweets(param){
 
 	var client = new twitter(allKeys.twitterKeys);
@@ -125,9 +127,11 @@ function showMyTweets(param){
 		}
 	});
 }	
-// ----------------------------------------------------------------------------------------------------------
+/*
+ ----------------------------------------------------------------------------------------------------------
 
-// do-what-it-says
+ do-what-it-says
+ */
 
 function showDoAsItSays(param){
 
@@ -147,3 +151,4 @@ function showDoAsItSays(param){
 }
 
 // --------------------------------------------------------------------------------------
+
