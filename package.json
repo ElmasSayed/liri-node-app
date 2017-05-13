@@ -11,7 +11,9 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "mytweets": "node liri.js my-tweets",
+    "spotify": "node liri.js spotify-this-song madonna",
+    "imdb": "node liri.js movie-this"
   },
   "repository": {
     "type": "git",
